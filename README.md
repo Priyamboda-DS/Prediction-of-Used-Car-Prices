@@ -13,7 +13,7 @@ Setting 'id' as index, here is a glimpse of the train dataset:
 
 <img width="1105" height="218" alt="image" src="https://github.com/user-attachments/assets/22667d1d-146d-4d93-a61e-f13e07b8d990" />
 
-## Findings from basic data exploration
+### Findings from basic data exploration
 
 The elementary exploration of data revealed the following:
 
@@ -21,3 +21,5 @@ The elementary exploration of data revealed the following:
 2. The fields 'brand', 'model', 'ext_col' and 'int_col' have very high cardinality.
 3. There are some missing values in columns 'fuel_type', 'engine', 'transmission', 'ext_col', 'int_col', 'accident' and 'clean_title'.
 4. The 'price' of the used cars have a very very wide range, strating from as low as 2,000 to around 3,00,000. The distribution of 'price' is also right skewed with a very long tail.
+
+<img width="1104" height="429" alt="image" src="https://github.com/user-attachments/assets/b337dfab-bc15-4a34-b1ae-c187b2f2b962" />
