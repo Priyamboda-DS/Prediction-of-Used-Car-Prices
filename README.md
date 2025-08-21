@@ -59,4 +59,8 @@ The elementary exploration of data revealed the following:
 
 <img width="1030" height="131" alt="image" src="https://github.com/user-attachments/assets/ed0b8271-6c5a-4809-a6fe-74c3232a7da2" />
 
-3. 
+3. I used f_oneway from scipy.stats to run ANOVA test between continuous target variable 'price' and independent categorical variables to find out whether correlation exists.
+
+<img width="1061" height="122" alt="image" src="https://github.com/user-attachments/assets/b868b513-62bc-443d-b127-b82b0582cad3" />
+
+4. 
