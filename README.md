@@ -39,7 +39,12 @@ The elementary exploration of data revealed the following:
 ### Visual exploration of correlation of independent variables with 'price'
 
 1. The scatter plot of 'price' vs. 'milage' and 'price' vs 'car_age' reveal a faint -ve correlation, which is somewhat expected.
+
+<img width="1121" height="221" alt="image" src="https://github.com/user-attachments/assets/c8232862-02fe-42e1-b633-7b4a6454be31" />
+
 2. The box plot of 'price' vs. other cardinal variables show prominent correlation in the price range 2,000 to 1,00,000. But the correlation is vague for the cars in very high price rance above 1,00,000.
+
+<img width="1454" height="812" alt="image" src="https://github.com/user-attachments/assets/b103dc65-1fe0-4453-ba6d-7f957c341c17" />
 
 
 ### Statistical exploration of correlation of independent variables with 'price'
