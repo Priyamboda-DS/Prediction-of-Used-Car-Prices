@@ -46,6 +46,8 @@ The elementary exploration of data revealed the following:
 
 <img width="1454" height="812" alt="image" src="https://github.com/user-attachments/assets/b103dc65-1fe0-4453-ba6d-7f957c341c17" />
 
+<img width="1454" height="814" alt="image" src="https://github.com/user-attachments/assets/88fd60bb-5bba-4024-b364-644a3ec9f597" />
+
 
 ### Statistical exploration of correlation of independent variables with 'price'
 
