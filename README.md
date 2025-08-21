@@ -52,4 +52,11 @@ The elementary exploration of data revealed the following:
 ### Statistical exploration of correlation of independent variables with 'price'
 
 1. I used Pearson Correlation to find linear relationship between 'price' and the numeric independent variables like 'milage','car_age','engine_hp','engine_liter' and 'engine_cylinder'. But none showed any significant linear relationship. 'car_age' and 'milage' has little higher -ve correlation coefficient with 'price' in price range up to 1,00,000.
-2. 
+
+<img width="1121" height="220" alt="image" src="https://github.com/user-attachments/assets/2bfbba54-3394-4f69-96b4-7de64e43b1ff" />
+
+2. I used Spearman's Rank Correlation Coefficient to find if any non-linear relationship exists between 'price' and the independent numeric variables. But in the price range up to 1,00,000 the 'car_age' and 'milage' has a coefficient around -0.5. In the high price range above 1,00,000 none are actually significant.
+
+<img width="1030" height="131" alt="image" src="https://github.com/user-attachments/assets/ed0b8271-6c5a-4809-a6fe-74c3232a7da2" />
+
+3. 
