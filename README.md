@@ -99,7 +99,9 @@ Hence I am segmenting the data based on prices- 'low' price range with prices up
 
 <img width="1091" height="150" alt="image" src="https://github.com/user-attachments/assets/b00dc1f0-a620-4b3e-beef-4a490c6b03b5" />
 
-<img width="1091" height="212" alt="image" src="https://github.com/user-attachments/assets/03f6686b-0ee5-424b-a7f2-b699ed7da95f" />
+<img width="1098" height="156" alt="image" src="https://github.com/user-attachments/assets/176c6eb1-a20b-4710-8599-45fb0e3fd0ab" />
+
+
 
 
 
