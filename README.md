@@ -85,7 +85,7 @@ I generated the mutual info scores between 'price' and these encoded values of t
 
 <img width="1177" height="137" alt="image" src="https://github.com/user-attachments/assets/b1b03c91-2127-48b2-8c91-0bd727b288f9" />
 
-So, as we see, none of the features show much strong correlation with 'price', yet all have certain contributions in predicting 'price'. Hence, I am keeping all the features for developing regression models.
+So, as we see, none of the features show much strong correlation with 'price', yet all have certain contributions in predicting 'price'. Hence, I am keeping all the features for developing regression models and leave it on the algorithm to find the right parameters and best features.
 
 
 ### Segmenting the data based on 'price'
@@ -107,7 +107,21 @@ Hence I am segmenting the data based on prices- 'low' price range with prices up
 
 ### Classification Model for predicting 'price_range' value in the unseen data
 
-Since I have segm
+Since I have segmented the train data into price ranges 'low', 'mid' and 'high' based on 'price', I am required to fit the train data to a classification model to predict the 'price_range' of the unseen records.
+I tried the K-Nearest Neighbour classifier, tree based method Random Forest classifier and boosting method XGBoost classifier to find the best model for predicting 'price_range'.
+
+Following are the steps I used:
+
+1. Divided the train dataset into train and test set in 80:20 ratio using train_test_split from sklearn model_selection.
+2. Used StandarScaler from sklearn preprocessing to scale the independent variable values to imitate normal distribution with mean at 0.
+3. Fitted each model with train set and compared the predicted value of test set with the actual price of test set. I used confusion_matrix, classification_report and accuracy_score from sklearn metrics to assess each model.
+
+Finally I selected RandomForectClassifier model for predicting the 'price_range' of unseen records. I fitted the selected model with complete set of train data and kept the model ready for applying on unseen records.
+
+<img width="1117" height="443" alt="image" src="https://github.com/user-attachments/assets/efdf8cc2-5907-4881-80c4-63bddd22e91c" />
+
+
+### 
 
 
 
