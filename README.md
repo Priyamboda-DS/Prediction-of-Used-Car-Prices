@@ -73,8 +73,10 @@ The elementary exploration of data revealed the following:
 ### Encoding very high cardinality variables
 
 The independent variables 'brand-model', 'ext_col' and 'int_col' have very high cardinality. And 'fuel_type' and 'transmission_type' have high variance in terms of frequency of occurance.
+
 Hence, I am replacing these independent variables with the median of log of price after treating it with a smoothing factor.
 I am taking the smoothing factor as, smoothing_factor=1/(1 + np.exp((50 - group_count)/100)), where group count is the size of each set of records the train dataset grouped by the column values.
+
 And the encodede value is defined as, encoded_val = smoothing_factor*(median of log_price grouped by column values) + (1 - smoothing_factor)*(global median of log_price)
 
 <img width="632" height="274" alt="image" src="https://github.com/user-attachments/assets/c46bc775-89f9-4c34-9760-640c53b64e21" />
@@ -92,8 +94,9 @@ The target variable 'price' has huge outliars on the right side, i.e. the distri
 
 <img width="1159" height="314" alt="image" src="https://github.com/user-attachments/assets/154f88e9-cbfa-4803-8a1a-34994273ec0d" />
 
-Such skeweness is supposed to cause huge errors in the regression outcome. 
-Hence I am segmenting the data based on prices- 'low' price range with prices up to 25,000, 'mid' price range with prices between 25,000 and 1,00,000 and 'high' price range with prices above 1,00,000.
+Such skeweness is supposed to cause huge errors in the prediction if single regression model is used to predict prices.
+
+Hence I am segmenting the data based on prices- 'low' price range with prices up to 25,000, 'mid' price range with prices between 25,000 and 1,00,000 and 'high' price range with prices above 1,00,000. I am planning to develop separate regression models for each of these price ranges.
 
 <img width="1086" height="146" alt="image" src="https://github.com/user-attachments/assets/689b62bd-22e9-42a6-ab70-594b7285e1e3" />
 
@@ -101,6 +104,10 @@ Hence I am segmenting the data based on prices- 'low' price range with prices up
 
 <img width="1098" height="156" alt="image" src="https://github.com/user-attachments/assets/176c6eb1-a20b-4710-8599-45fb0e3fd0ab" />
 
+
+### Classification Model for predicting 'price_range' value in the unseen data
+
+Since I have segm
 
 
 
