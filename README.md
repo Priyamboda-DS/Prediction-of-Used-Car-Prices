@@ -59,8 +59,13 @@ The elementary exploration of data revealed the following:
 
 <img width="1030" height="131" alt="image" src="https://github.com/user-attachments/assets/ed0b8271-6c5a-4809-a6fe-74c3232a7da2" />
 
-3. I used f_oneway from scipy.stats to run ANOVA test between continuous target variable 'price' and independent categorical variables to find out whether correlation exists.
+3. I used f_oneway from scipy.stats to run ANOVA test between continuous target variable 'price' and independent categorical variables to find out whether any correlation exists.
+   The outcome reveals something interesting- below price 1,00,000 the brand-model does not have much significance but above 1,00,000, brand_model comes out as the most significant feature in deciding price.
 
 <img width="1061" height="122" alt="image" src="https://github.com/user-attachments/assets/b868b513-62bc-443d-b127-b82b0582cad3" />
 
-4. 
+4. I also used Mutual Info Regression for numeric and low cardinality variable to find how much important those are in deciding the price.
+   In the low price category, price below 25,000 'milage' revealed the maximum score of 0.4. In the price range 25,000 to 1,00,000, again 'milage' has highest score of 0.3. But in the high price range category, above 1,00,000, none of the variables score more than 0.2.
+
+<img width="1039" height="160" alt="image" src="https://github.com/user-attachments/assets/7bcaf618-9ece-4702-a334-b54210122b2e" />
+
