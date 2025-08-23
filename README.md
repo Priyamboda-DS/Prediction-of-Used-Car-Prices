@@ -123,6 +123,27 @@ Finally I selected RandomForectClassifier model for predicting the 'price_range'
 
 ### Regression Models for each segment of 'price_range' for predicting 'price'
 
+I took the following approach to develop the regression models for each price_range:
+
+1. I checked the distribution of 'price' in each price range segment.
+   For segment 'low', i.e. price <= 25,000, the distribution is almost uniform; thus I take 'price' as the target for prediction.
+   But for segments 'mid' (price between 25,000 and 1,00,000) and 'high' (price above 1,00,000), the distribution is right skewed (long tail at right for price_range 'high'). To smoothen such skewness, I took numpy.log1p of price as the target for prediction.
+
+2. Since the independent variables do not show much linear relationship with the target variables in any of the segments, I tried boosting algorithms- XGBoost Regressor and LightGBM Regressor for training the regression models.
+
+3. Divided the train dataset into train and test set in 80:20 ratio using train_test_split from sklearn model_selection.
+
+4. Used StandarScaler from sklearn preprocessing to scale the independent variable values to imitate normal distribution with mean at 0.
+
+5. Used Randomized Search CV for tuning the hyper parameters in these models.
+
+6. Used metrics mean_absolute_error, mean_absolute_percentage_error, square root of mean_squared_error and median_absolute_error from sklearn.metrics on test dataset to find the best model. However, I depended mainly on square root of mean_squared_error to actually select the best model.
+
+7. I see, LightGBM Regressor came out as the best model for all the three segments.
+
+8. According to these best LightGBM regressor models, 'milage', 'brand_model_score', 'car_age', 'engine_hp' and 'ext_col_score' come out as the most important features across different segments. 
+
+9. Once the final model is selected for each segment, I fitted it with the complete set of train data and kept the model ready for applying on unseen data.
 
 
 
