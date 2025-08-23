@@ -145,6 +145,12 @@ I took the following approach to develop the regression models for each price_ra
 
 9. Once the final model is selected for each segment, I fitted it with the complete set of train data and kept the model ready for applying on unseen data.
 
+<img width="876" height="145" alt="image" src="https://github.com/user-attachments/assets/02e9e8d9-af47-458d-942b-d6ed99a901f8" />
+
+<img width="896" height="150" alt="image" src="https://github.com/user-attachments/assets/152c52be-db54-46c7-98c8-b560ce1d552b" />
+<img width="1112" height="361" alt="image" src="https://github.com/user-attachments/assets/f8fb41ed-1749-4a83-9c95-7e0d2fdb8d55" />
+<img width="1087" height="295" alt="image" src="https://github.com/user-attachments/assets/8bea3584-b548-4b80-a212-2c29224c2e95" />
+
 
 
 
