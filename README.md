@@ -69,3 +69,39 @@ The elementary exploration of data revealed the following:
 
 <img width="1039" height="160" alt="image" src="https://github.com/user-attachments/assets/7bcaf618-9ece-4702-a334-b54210122b2e" />
 
+
+### Encoding very high cardinality variables
+
+The independent variables 'brand-model', 'ext_col' and 'int_col' have very high cardinality. And 'fuel_type' and 'transmission_type' have high variance in terms of frequency of occurance.
+Hence, I am replacing these independent variables with the median of log of price after treating it with a smoothing factor.
+I am taking the smoothing factor as, smoothing_factor=1/(1 + np.exp((50 - group_count)/100)), where group count is the size of each set of records the train dataset grouped by the column values.
+And the encodede value is defined as, encoded_val = smoothing_factor*(median of log_price grouped by column values) + (1 - smoothing_factor)*(global median of log_price)
+
+<img width="632" height="274" alt="image" src="https://github.com/user-attachments/assets/c46bc775-89f9-4c34-9760-640c53b64e21" />
+
+I generated the mutual info scores between 'price' and these encoded values of these high cardinality variables, but the highest value shows around 0.26 for 'brand_model_score' for price range between 25,000 and 1,00,000.
+
+<img width="1177" height="137" alt="image" src="https://github.com/user-attachments/assets/b1b03c91-2127-48b2-8c91-0bd727b288f9" />
+
+So, as we see, none of the features show much strong correlation with 'price', yet all have certain contributions in predicting 'price'. Hence, I am keeping all the features for developing regression models.
+
+
+### Segmenting the data based on 'price'
+
+The target variable 'price' has huge outliars on the right side, i.e. the distribution of price is right skwed with a very long tail.
+
+<img width="1159" height="314" alt="image" src="https://github.com/user-attachments/assets/154f88e9-cbfa-4803-8a1a-34994273ec0d" />
+
+Such skeweness is supposed to cause huge errors in the regression outcome. 
+Hence I am segmenting the data based on prices- 'low' price range with prices up to 25,000, 'mid' price range with prices between 25,000 and 1,00,000 and 'high' price range with prices above 1,00,000.
+
+<img width="1086" height="146" alt="image" src="https://github.com/user-attachments/assets/689b62bd-22e9-42a6-ab70-594b7285e1e3" />
+
+<img width="1091" height="150" alt="image" src="https://github.com/user-attachments/assets/b00dc1f0-a620-4b3e-beef-4a490c6b03b5" />
+
+<img width="1091" height="212" alt="image" src="https://github.com/user-attachments/assets/03f6686b-0ee5-424b-a7f2-b699ed7da95f" />
+
+
+
+
+
