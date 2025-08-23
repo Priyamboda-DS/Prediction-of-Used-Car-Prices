@@ -150,6 +150,9 @@ I took the following approach to develop the regression models for each price_ra
 <img width="1087" height="295" alt="image" src="https://github.com/user-attachments/assets/8bea3584-b548-4b80-a212-2c29224c2e95" />
 
 
+### Predicting the price of unseen used car data
+
+
 
 
 
