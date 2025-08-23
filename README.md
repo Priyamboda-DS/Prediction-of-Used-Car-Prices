@@ -121,7 +121,9 @@ Finally I selected RandomForectClassifier model for predicting the 'price_range'
 <img width="1117" height="443" alt="image" src="https://github.com/user-attachments/assets/efdf8cc2-5907-4881-80c4-63bddd22e91c" />
 
 
-### 
+### Regression Models for each segment of 'price_range' for predicting 'price'
+
+
 
 
 
