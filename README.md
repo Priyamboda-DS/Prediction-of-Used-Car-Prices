@@ -141,9 +141,11 @@ I took the following approach to develop the regression models for each price_ra
 
 7. I see, LightGBM Regressor came out as the best model for all the three segments.
 
-8. According to these best LightGBM regressor models, 'milage', 'brand_model_score', 'car_age', 'engine_hp' and 'ext_col_score' come out as the most important features across different segments. 
+8. The LightGBM regressor finds the features 'milage', 'brand_model_score' (encodede value for 'brand_model'), 'car_age', 'engine_hp' and 'ext_col_score' (encoded value for exterior color) are the most important features across different segments. 
 
 9. Once the final model is selected for each segment, I fitted it with the complete set of train data and kept the model ready for applying on unseen data.
+
+Here is a glimpse of the model outcome for 'mid' segment cars:
 
 <img width="896" height="150" alt="image" src="https://github.com/user-attachments/assets/152c52be-db54-46c7-98c8-b560ce1d552b" />
 <img width="1112" height="361" alt="image" src="https://github.com/user-attachments/assets/f8fb41ed-1749-4a83-9c95-7e0d2fdb8d55" />
@@ -152,6 +154,25 @@ I took the following approach to develop the regression models for each price_ra
 
 ### Predicting the price of unseen used car data
 
+Now comes the final part of the project which is to predict the prices of unseen used car records. 
+
+The unseen used car data is collected in a dataframe and I am supposed to replicate the exact steps I followed to transform the train dataset, on this unseen records.
+To do so, I followed the steps below:
+
+1. To obtain the derived columns like 'engine_hp','engine_liter','engine_cylinder' and 'transmission_type'- I converted the functions, already defined during preparation of train data, to preprocessing steps using FunctionTransformer from sklearn preprocessing.
+
+2. For filling up missing values, I already created dictionaries from train data. I defined a function to apply that mapping on new data and converted such mapping to preprocessing steps using FunctionTransformer from sklearn.Preprocessing. Given below is one such example:
+
+<img width="1116" height="98" alt="image" src="https://github.com/user-attachments/assets/060ef78c-eb13-4109-be9e-68fc28c54156" />
+<img width="998" height="509" alt="image" src="https://github.com/user-attachments/assets/1f756779-fbbb-470b-88f6-a84bbe832a10" />
+
+3. The cardinal feature encoding is replicated in the same way as creating a map from the train data described as above.
+
+4. Now all such preprocessing steps are collected in right sequence in a Pipeline and the unseen data is transformed by passing it through such pipeline.
+
+<img width="1109" height="378" alt="image" src="https://github.com/user-attachments/assets/0c0c1184-6aac-41b9-96da-bc26e19f3ad3" />
+
+5. 
 
 
 
