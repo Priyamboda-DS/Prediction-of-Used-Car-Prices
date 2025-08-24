@@ -1,4 +1,4 @@
-# Prediction-of-Used-Car-Prices
+# Prediction of Used Car Prices
 
 Hi friends! This is one of my very initial attempts in Machine Learning.
 
