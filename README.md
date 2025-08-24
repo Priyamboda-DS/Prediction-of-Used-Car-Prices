@@ -172,7 +172,24 @@ To do so, I followed the steps below:
 
 <img width="1109" height="378" alt="image" src="https://github.com/user-attachments/assets/0c0c1184-6aac-41b9-96da-bc26e19f3ad3" />
 
-5. 
+5. Once I am ready with the unseen data transformed into exactly the same structure as the train data, I did:
+
+   i. Applied the Classification Model already fitted with the train data and predicted the price range segments.
+   
+<img width="1117" height="326" alt="image" src="https://github.com/user-attachments/assets/c8285a6a-17ab-44f1-8cbc-7826b59a81fa" />
+
+   ii. Applied the Regression Model for respective segments, already fittedt with the train data to predict the price.
+
+<img width="1110" height="281" alt="image" src="https://github.com/user-attachments/assets/ffbe1972-0d12-4a2d-95fa-a4eb332cd023" />
+
+6. All the predicted prices are now available for the unseen records.
+
+<img width="280" height="201" alt="image" src="https://github.com/user-attachments/assets/5fd59856-d180-4244-954a-272fab32d05c" />
+
+<img width="1099" height="314" alt="image" src="https://github.com/user-attachments/assets/efbf7407-07fe-4adf-96bc-c720b59fdcfd" />
+
+
+
 
 
 
